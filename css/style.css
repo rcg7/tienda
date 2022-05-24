@@ -2,7 +2,7 @@
     --primario: #9c27b0;
     --primarioOscuro: #89119d;
     --secundario: #ffce00;
-    --secundarioOscuro: rgb(233,287,2);
+    --secundarioOscuro: #ffaa3b;
     --blanco: #fff;
     --negro: #000;
 
@@ -36,7 +36,7 @@ html {
   }
 
   img {
-      width: 100%;
+    width: 100%;
   }
   .contenedor {
       max-width: 120rem;
@@ -179,6 +179,10 @@ html {
     }
 }
 
+.nosotros__contenido {
+    margin: 2rem;
+}
+
 .nosotros__imagen {
     grid-row: 1 / 2;
 }
@@ -195,6 +199,7 @@ html {
     display: grid;
     grid-template-columns: repeat( 2, 1fr);
     gap: 2rem;
+    margin: 2rem;
 }
 
 @media (min-width: 768px) {
@@ -221,20 +226,40 @@ html {
     }
 }
 
+.camisa__contenido {
+    margin: 2rem;
+}
+
 .formulario {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
 }
 
-.formulario__campo {
-    border: 1rem solid var(--primarioOscuro);
-    background-color: transparent;
-    color: var(--negro);
-    font-size: 2rem;
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 1rem;
-    appearance: none;
+.formulario__campo,
+.formulario__campos {
+        border: 1rem solid var(--primarioOscuro);
+        background-color: var(--blanco);
+        color: var(--negro);
+        font-size: 2rem;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 1rem;
+        appearance: none;
+        grid-column: 1 / 3;
+}
+
+@media (min-width: 768px) {
+    .formulario__campo {
+        grid-column: 2 / 3 ;
+        grid-row: 1 / 2;
+}
+}
+@media (min-width: 768px) {
+    .formulario__campos {
+        grid-column: 1 / 2 ;
+        grid-row: 2 / 1;
+}
+    
 }
 
 .formulario__submit {
@@ -243,7 +268,7 @@ html {
     font-size: 2rem;
     font-family: var(--fuentePrincipal);
     padding: 2rem;
-    transition: background-color var(--secundarioOscuro) .3s ease;
+    transition: background-color .3s ease;
     grid-column: 1 / 3;
 }
 
