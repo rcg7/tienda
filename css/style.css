@@ -36,7 +36,7 @@ html {
   }
 
   img {
-      max-width: 100%;
+      width: 100%;
   }
   .contenedor {
       max-width: 120rem;
@@ -120,15 +120,7 @@ html {
  .producto {
     background-color: var(--primarioOscuro);
     padding: 1rem;
-  }
-
-  .producto__imagen {
-    width: 100%;
-  }
-
-  .producto__informacion {
-
-  }
+ }
 
   .producto__nombre {
     font-size: 4rem;
@@ -173,4 +165,89 @@ html {
     }
  }
 
- 
+ /** Nosotros **/
+
+.nosotros {
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+}
+
+@media (min-width: 768px) {
+    .nosotros {
+       grid-template-columns: repeat(2, 1fr);
+       column-gap: 2rem;
+    }
+}
+
+.nosotros__imagen {
+    grid-row: 1 / 2;
+}
+
+@media (min-width: 768px) {
+    .nosotros__imagen {
+        grid-column:  2 / 3;
+    }
+}
+
+/** Bloques **/
+
+.bloques {
+    display: grid;
+    grid-template-columns: repeat( 2, 1fr);
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .bloques {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.bloque {
+    text-align: center;
+}
+
+.bloque__titulo {
+    margin: 0;
+}
+
+/** Página del producto **/
+
+@media (min-width: 768px) {
+    .camisa {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+    }
+}
+
+.formulario {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.formulario__campo {
+    border: 1rem solid var(--primarioOscuro);
+    background-color: transparent;
+    color: var(--negro);
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 1rem;
+    appearance: none;
+}
+
+.formulario__submit {
+    background-color: var(--secundario);
+    border: none;
+    font-size: 2rem;
+    font-family: var(--fuentePrincipal);
+    padding: 2rem;
+    transition: background-color var(--secundarioOscuro) .3s ease;
+    grid-column: 1 / 3;
+}
+
+.formulario__submit:hover {
+    cursor: pointer;
+    background-color: var(--secundarioOscuro);
+}
